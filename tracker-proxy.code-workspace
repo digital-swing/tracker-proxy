@@ -1,0 +1,266 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"peacock.color": "#fff",
+		"files.exclude": {
+			"**/.git": false
+		},
+
+		"editor.formatOnSave": true,
+		"eslint.workingDirectories": [
+			{
+				"mode": "auto"
+			}
+		],
+		"eslint.options": {
+			"configFile": ".eslintrc.vscode.js"
+		},
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		},
+		"eslint.format.enable": true,
+		"vetur.format.enable": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"phpstan.memoryLimit": "4096M",
+		"phpstan.configuration": "./phpstan.neon",
+		"phpstan.level": "config",
+		"phpSniffer.autoDetect": true,
+		"phpSniffer.run": "onType",
+		"phpSniffer.executablesFolder": "./vendor/bin",
+		"phpSniffer.standard": "./phpcs.xml",
+		"phpmd.rules": "${workspaceFolder}/phpmd.xml",
+		"[php]": {
+			"editor.defaultFormatter": "wongjn.php-sniffer"
+		},
+		"[scss]": {
+			"editor.defaultFormatter": "stylelint.vscode-stylelint"
+		},
+		"emmet.triggerExpansionOnTab": true,
+		"[blade]": {
+			"editor.defaultFormatter": "shufo.vscode-blade-formatter",
+			"editor.formatOnSave": false
+		},
+		"auto-close-tag.SublimeText3Mode": true,
+		"editor.formatOnType": true,
+		"blade.format.enable": true,
+		"emmet.preferences": {
+			"filter.commentAfter": "<!-- /[#ID][.CLASS] -->"
+		},
+		"emmet.syntaxProfiles": {
+			// Enable XHTML dialect for HTML syntax
+			// “html”: “xhtml”
+			"html": {
+				"filters": "html, c"
+			}
+		},
+		"css.validate": false,
+		"less.validate": false,
+		"scss.validate": false,
+		"stylelint.validate": [
+			"css",
+			"html",
+			"javascriptreact",
+			"less",
+			"markdown",
+			"postcss",
+			"sass",
+			"scss",
+			"source.css.styled",
+			"source.markdown.math",
+			"styled-css",
+			"sugarss",
+			"svelte",
+			"typescript",
+			"typescriptreact",
+			"vue",
+			"vue-html",
+			"vue-postcss",
+			"xml",
+			"xsl"
+		],
+		"search.exclude": {
+			".git": true,
+			"*.map": true,
+			"**/.cache-loader": true,
+			"**/*.log": true,
+			"**/*.sublime-workspace": true,
+			"**/autoload_classmap.php": true,
+			"**/autoload_static.php": true,
+			"**/cache": true,
+			"**/composer.lock": true,
+			"**/installed.json": true,
+			"**/package-lock.json": true,
+			"**/public": true,
+			"**/storage": true,
+			"**/vendor": true,
+			"**/yarn.lock": true
+		},
+		"search.sortOrder": "modified",
+		"files.associations": {
+			"Movefile": "yaml",
+			".stylelintrc": "jsonc"
+		},
+		"php.validate.enable": false,
+		"php.validate.run": "onType",
+		"php.suggest.basic": false,
+		"intelephense.stubs": [
+			"apache",
+			"bcmath",
+			"bz2",
+			"calendar",
+			"com_dotnet",
+			"Core",
+			"ctype",
+			"curl",
+			"date",
+			"dba",
+			"dom",
+			"enchant",
+			"exif",
+			"FFI",
+			"fileinfo",
+			"filter",
+			"fpm",
+			"ftp",
+			"gd",
+			"gettext",
+			"gmp",
+			"hash",
+			"iconv",
+			"imap",
+			"intl",
+			"json",
+			"ldap",
+			"libxml",
+			"mbstring",
+			"meta",
+			"mysqli",
+			"oci8",
+			"odbc",
+			"openssl",
+			"pcntl",
+			"pcre",
+			"PDO",
+			"pdo_ibm",
+			"pdo_mysql",
+			"pdo_pgsql",
+			"pdo_sqlite",
+			"pgsql",
+			"Phar",
+			"posix",
+			"pspell",
+			"readline",
+			"Reflection",
+			"session",
+			"shmop",
+			"SimpleXML",
+			"snmp",
+			"soap",
+			"sockets",
+			"sodium",
+			"SPL",
+			"sqlite3",
+			"standard",
+			"superglobals",
+			"sysvmsg",
+			"sysvsem",
+			"sysvshm",
+			"tidy",
+			"tokenizer",
+			"xml",
+			"xmlreader",
+			"xmlrpc",
+			"xmlwriter",
+			"xsl",
+			"Zend OPcache",
+			"zip",
+			"zlib",
+			"wordpress"
+		],
+		"[json]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+
+		"vetur.format.defaultFormatter.ts": "vscode-typescript",
+		"vetur.format.defaultFormatter.html": "js-beautify-html",
+		"prettier.useTabs": true,
+		"todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "@TODO"],
+		"diffEditor.renderSideBySide": true,
+
+		"editor.acceptSuggestionOnEnter": "off",
+		"circleci.apiKey": "4c88495cb914dbb5e8a363a06b9e45c8f9ef4850",
+		"stylelint.packageManager": "yarn",
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#ffffff",
+			"activityBar.activeBorder": "#df9f9f",
+			"activityBar.background": "#ffffff",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#df9f9f",
+			"activityBarBadge.foreground": "#15202b",
+			"statusBar.background": "#ffffff",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#e6e6e6",
+			"titleBar.activeBackground": "#ffffff",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#ffffff99",
+			"titleBar.inactiveForeground": "#15202b99",
+			"sash.hoverBorder": "#ffffff",
+			"statusBarItem.remoteBackground": "#ffffff",
+			"statusBarItem.remoteForeground": "#15202b"
+		},
+		"[xml]": {
+			"editor.defaultFormatter": "DotJoshJohnson.xml"
+		},
+		"liveServer.settings.port": 5501
+	},
+
+	"extensions": {
+		"recommendations": [
+			"breezelin.phpstan",
+			"ecodes.vscode-phpmd",
+			"wongjn.php-sniffer",
+			"stylelint.vscode-stylelint",
+			"dhoeric.ansible-vault",
+			"gruntfuggly.todo-tree",
+			"codestream.codestream",
+			"octref.vetur",
+			"esbenp.prettier-vscode",
+			"wordpresstoolbox.wordpress-toolbox",
+			"dariofuzinato.vue-peek",
+			"hollowtree.vue-snippets",
+			"jcbuisson.vue",
+			"vscode-icons-team.vscode-icons",
+			"jeremyljackson.vs-docblock",
+			"chakrounanas.turbo-console-log",
+			"awesomektvn.toggle-semicolon",
+			"albert.tabout",
+			"mohsen1.prettify-json",
+			"mehedidracula.php-namespace-resolver",
+			"neilbrayfield.php-docblocker",
+			"johnpapa.vscode-peacock",
+			"christian-kohler.path-intellisense",
+			"ms-vsliveshare.vsliveshare",
+			"cjhowe7.laravel-blade",
+			"codingyu.laravel-goto-view",
+			"onecentlin.laravel5-snippets",
+			"amiralizadeh9480.laravel-extra-intellisense",
+			"austenc.laravel-blade-spacer",
+			"onecentlin.laravel-blade",
+			"akamud.vscode-javascript-snippet-pack",
+			"sburg.vscode-javascript-booster",
+			"xabikos.javascriptsnippets",
+			"zignd.html-css-class-completion",
+			"vincaslt.highlight-matching-tag",
+			"rohit-gohri.format-code-action",
+			"sleistner.vscode-fileutils",
+			"drknoxy.eslint-disable-snippets",
+			"waderyan.gitblame",
+			"dotjoshjohnson.xml"
+		]
+	}
+}

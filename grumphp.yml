@@ -1,0 +1,61 @@
+grumphp:
+  ignore_unstaged_changes: false
+  testsuites:
+    code_quality:
+      tasks:
+        - phpcs
+        - phplint
+        - phpmd
+        - phpcpd
+        - phpstan
+  tasks:
+    #############################################
+    #   Composer Verifs
+    composer:
+      file: "./public_html/composer.json"
+
+    #############################################
+    #############################################
+    #   Syntax Errors Detection
+    phplint:
+      exclude: ["vendor"]
+      triggered_by: ["php"]
+
+    jsonlint:
+      detect_key_conflicts: true
+
+    xmllint: ~
+
+    yamllint:
+      ignore_patterns:
+        - .github
+        - wp-cli.yml
+
+    eslint:
+      bin: ./public_html/web/app/themes/ds-custom/node_modules/.bin/eslint
+      config: ./public_html/web/app/themes/ds-custom/.eslintrc.js
+    # #############################################
+    phpstan:
+      configuration: "./public_html/phpstan.neon"
+      # memory_limit: "1G"
+      # use_grumphp_paths: true
+    phpcs:
+      standard: "./public_html/phpcs.xml"
+    phpmd:
+      ruleset: ["./public_html/phpmd.xml"]
+    phpcpd:
+      directory: ["./public_html/web/app/themes/ds-custom"]
+      exclude:
+        [
+          "./public_html/web/app/themes/ds-custom/vendor",
+          "./public_html/web/app/themes/ds-custom/config",
+          "./public_html/web/app/themes/ds-custom/node_modules",
+          "./public_html/web/app/themes/ds-custom/storage",
+        ]
+      fuzzy: true
+      min_lines: 5
+      min_tokens: 70
+      triggered_by: ["php"]
+    # phpunit: ~
+
+    # securitychecker: ~

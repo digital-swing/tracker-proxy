@@ -1,0 +1,47 @@
+# Start command: composer update --classmap-authoritative && vendor/bin/phpstan analyze
+parameters:
+  level: 5
+  paths:
+    - .
+  scanDirectories:
+    - vendor
+    - web/app/themes/
+    - web/app/plugins
+    - web/app/mu-plugins
+  excludePaths:
+    analyse:
+      - vendor
+      - web/wp
+      - web/app/plugins
+      - web/app/mu-plugins
+      - web/app/uploads
+      - web/app/themes/ds-custom/node_modules
+      - web/app/themes/ds-custom/storage
+      - web/app/themes/ds-custom/vendor
+      - web/app/themes/ds-custom/config
+      - web/app/themes/ds-custom/tests
+      - web/app/themes/ds-custom/index.php
+      - tests
+    analyseAndScan:
+      # - vendor/php-stubs/wordpress-stubs
+      - web/wp/wp-admin/includes/noop.php
+      - web/app/themes/ds-custom/vendor/roots/acorn/src/_ide-helpers.php
+      - wp-job-offers
+      - ds-lazy-load
+      - ds-lazy-load2
+      - web/app/plugins/wp-job-offers
+      - web/app/plugins/ds-lazy-load
+      - web/app/plugins/ds-lazy-load2
+      - fxmachine
+  ignoreErrors:
+    # Uses func_get_args()
+    - '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
+    #- '#^Function do_action invoked with [3456] parameters, 1-2 required\.$#'
+    #- '#^Function current_user_can invoked with 2 parameters, 1 required\.$#'
+    #- '#^Function add_query_arg invoked with [123] parameters?, 0 required\.$#'
+    #- '#^Function add_theme_support invoked with [2345] parameters, 1 required\.$#'
+    #- '#^Function wp_sprintf invoked with [23456] parameters, 1 required\.$#'
+    # https://core.trac.wordpress.org/ticket/43304
+    #- '/^Parameter #2 \$deprecated of function load_plugin_textdomain expects string, false given\.$/'
+    # WP-CLI accepts a class as callable
+    #- '/^Parameter #2 \$callable of static method WP_CLI::add_command\(\) expects callable\(\): mixed, \S+ given\.$/'

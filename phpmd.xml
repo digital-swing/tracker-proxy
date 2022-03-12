@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="phpmd-no-controversial"
+    xmlns="http://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+    xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>
+    Enable all rulesets, except Controversial ("camelCase" rules).
+    Required for WordPress development.
+  </description>
+
+
+  <!-- <rule ref="rulesets/cleancode.xml"/>
+  <rule ref="rulesets/codesize.xml"/>
+  <rule ref="rulesets/design.xml"/>
+  <rule ref="rulesets/naming.xml"/> -->
+  <rule ref="rulesets/unusedcode.xml"/>
+
+    <exclude-pattern>web/wp/</exclude-pattern>
+    <exclude-pattern>web/app/mu-plugins/</exclude-pattern>
+    <exclude-pattern>web/app/plugins/</exclude-pattern>
+    <exclude-pattern>web/app/upgrade/</exclude-pattern>
+    <exclude-pattern>web/app/uploads/</exclude-pattern>
+    <exclude-pattern>node_modules/</exclude-pattern>
+    <exclude-pattern>src/lib/</exclude-pattern>
+    <exclude-pattern>__tests__</exclude-pattern>
+    <exclude-pattern>public/</exclude-pattern>
+    <exclude-pattern>languages/</exclude-pattern>
+    <exclude-pattern>trellis/*</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>tests/</exclude-pattern>
+</ruleset>

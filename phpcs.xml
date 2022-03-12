@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<ruleset name="Digital_Swing">
+    <!-- Scan all files in directory -->
+    <file>web/test-config.php</file>
+    <file>web/app/themes</file>
+    <file>web/app/mu-plugins/polylang-custom-flags.php</file>
+    <file>web/app/mu-plugins/disable-update-notifications.php</file>
+    <file>ds-lazy-load2</file>
+    <file>tests</file>
+    <description>Digital Swing Coding Standards.</description>
+
+    <exclude-pattern>config/*</exclude-pattern>
+    <exclude-pattern>index.php</exclude-pattern>
+    <exclude-pattern>functions.php</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>resources/*</exclude-pattern>
+    <exclude-pattern>tests/(_data|_output|_support)</exclude-pattern>
+    <exclude-pattern>storage/*</exclude-pattern>
+    <exclude-pattern>public/*</exclude-pattern>
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>trellis/*</exclude-pattern>
+    <exclude-pattern>*\.(inc|css|js)</exclude-pattern>
+    <!-- exclude our migrations directory from the violation check-->
+    <!-- <exclude-pattern>*/src/*</exclude-pattern> -->
+
+    <!-- Show colors in console -->
+    <arg value="-colors"/>
+    <!-- ignore warnings and display ERRORS only -->
+    <arg value="np"/>
+
+    <!-- Include the NeutronRuleset standard. -->
+    <rule ref="NeutronRuleset">
+        <!--
+		We may want a middle ground though. The best way to do this is add the
+		entire ruleset, then rule by rule, remove ones that don't suit a project.
+		We can do this by running `phpcs` with the '-s' flag, which allows us to
+		see the names of the sniffs reporting errors.
+		Once we know the sniff names, we can opt to exclude sniffs which don't
+		suit our project like so.
+		The below two examples just show how you can exclude rules.
+		They are not intended as advice about which sniffs to exclude.
+		-->
+
+        <!--
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing"/>
+		<exclude name="WordPress.Security.EscapeOutput"/>
+		-->
+        <exclude name="WordPress.PHP.DisallowShortTernary.Found" />
+        <exclude name="PEAR.NamingConventions.ValidClassName.Invalid" />
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralDomain" />
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralText" />
+        <exclude name="WordPress.WP.I18n.InterpolatedVariableText" />
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+        <exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase" />
+    </rule>
+
+    <rule ref="VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable">
+        <exclude-pattern>tests</exclude-pattern>
+    </rule>
+    <rule ref="NeutronStandard.Constants.DisallowDefine.Define">
+        <exclude-pattern>web/test-config.php</exclude-pattern>
+    </rule>
+</ruleset>
+
