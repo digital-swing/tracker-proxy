@@ -11,7 +11,7 @@
 
   function matomo_analytics_tracking_code()
   {
-      if(defined('MATOMO_PROXY_URL') ) { ?> 
+      if(defined('MATOMO_PROXY_URL') && defined('MATOMO_PROPERTY_ID')) { ?> 
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,7 +21,7 @@
         (function() {
             var u="<?php echo MATOMO_PROXY_URL; ?>";
             _paq.push(['setTrackerUrl', u+'/matomo.php']);
-            _paq.push(['setSiteId', '2']);
+            _paq.push(['setSiteId', '<?php echo MATOMO_PROPERTY_ID; ?>']);
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+'/matomo.php'; s.parentNode.insertBefore(g,s);
         })();
