@@ -1,6 +1,6 @@
 {
     "name": "digital-swing/tracker-proxy",
-    "type": "library",
+    "type": "wordpress-dropin",
     "authors": [
         {
             "name": "Lucas Demea",
