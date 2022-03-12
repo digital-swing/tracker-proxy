@@ -5,8 +5,8 @@
 // https://github.com/matomo/matomo/tree/master/misc/proxy-hide-matomo-url#matomo-proxy-hide-url
 // -----
 
-require_once dirname(dirname( __DIR__ ) ) . '/vendor/autoload.php';
-require_once dirname(dirname( __DIR__ ) ) . '/config/application.php';
+require_once dirname(dirname(dirname(dirname( __DIR__ ) ))) . '/vendor/autoload.php';
+require_once dirname(dirname(dirname(dirname( __DIR__ ) ))) . '/config/application.php';
 
 // Edit the line below, and replace http://your-matomo-domain.example.org/matomo/
 // with your Matomo URL ending with a slash.
